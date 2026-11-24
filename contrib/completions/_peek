@@ -1,0 +1,19 @@
+#compdef peek
+# zsh completion for peek
+# install: cp _peek /usr/share/zsh/site-functions/_peek
+
+_peek() {
+    _arguments -s \
+        '--root[directory to search]:directory:_files -/' \
+        '--limit[results to keep]:count:' \
+        '--height[preview lines]:lines:' \
+        '--depth[maximum directory depth]:levels:' \
+        '--print[print only the best match path]' \
+        '--no-preview[skip the preview pane]' \
+        '(-i --interactive)'{-i,--interactive}'[pick interactively]' \
+        '(-h --help)'{-h,--help}'[show help]' \
+        '(-V --version)'{-V,--version}'[show version]' \
+        '*:path:_files'
+}
+
+_peek "$@"
