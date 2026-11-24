@@ -81,8 +81,13 @@ terminal width.
 
 ### Completions
 
-The generator lives in `contrib/completions/`; see the section in that
-directory for the `peek.bash` and `_peek` snippets.
+Bash and zsh completions live in `contrib/completions/`; both are plain
+scripts, so copy them where your shell looks:
+
+```sh
+install -m644 contrib/completions/peek.bash /usr/share/bash-completion/completions/peek
+install -m644 contrib/completions/_peek /usr/share/zsh/site-functions/_peek
+```
 
 ## Layout
 
