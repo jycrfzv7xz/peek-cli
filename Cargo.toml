@@ -1,0 +1,16 @@
+[package]
+name = "peek-cli"
+version = "0.1.0"
+edition = "2021"
+description = "Fuzzy file finder with an inline preview pane"
+license = "MIT"
+repository = "https://github.com/jycrfzv7xz/peek-cli"
+keywords = ["cli", "fuzzy", "finder", "preview"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "peek"
+path = "src/main.rs"
+
+[profile.release]
+lto = true
